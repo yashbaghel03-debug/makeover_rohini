@@ -64,3 +64,19 @@ galleryFix.textContent = `
   }
 `;
 document.head.appendChild(galleryFix);
+
+// Use the uploaded files that are present in the deployed images directory.
+const uploadedPhotos = [
+  'images/exterior%201.jpg',
+  'images/unnamed.webp',
+  'images/exterior%201.jpg',
+  'images/face%202.jpg',
+  'images/face%201.jpg',
+  'images/hair%202.jpg',
+  'images/face%201.jpg',
+  'images/exterior%201.jpg'
+];
+
+document.querySelectorAll('main img').forEach((image, index) => {
+  if (uploadedPhotos[index]) image.src = uploadedPhotos[index];
+});
